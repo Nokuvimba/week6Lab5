@@ -25,4 +25,12 @@ public class ProductService {
         myList.add(product);
         return myList;
     }
+    public List<Product> deleteProduct( int id){
+        for (Product p : myList) {
+            if (Objects.equals(p.getId(), id)) {
+                myList.remove(p);
+            }
+        }
+        return myList;
+    }
 }
