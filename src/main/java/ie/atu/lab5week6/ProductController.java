@@ -24,11 +24,11 @@ public class ProductController {
         list = myService.addProduct(product);
         return  list;
     }
-   /*@PutMapping
-    public List<Product> updateProduct(@PathVariable("id")String id, @RequestBody Product product){
-        for(Product p: myService){
+   @PutMapping("/{id}")
+    public List<Product> updateProduct(@PathVariable int id, @RequestBody Product product){
 
-        }
-    } */
+       list = myService.updateProduct(product, id);
+       return  list;
+    }
 
 }
